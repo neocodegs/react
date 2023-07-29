@@ -34,6 +34,8 @@ describe('onlyChild', () => {
           <span />
         </WrapComponent>
       );
+      console.log('instance', React.Children)
+
       React.Children.only(instance.props.children);
     }).toThrow();
   });
@@ -41,6 +43,7 @@ describe('onlyChild', () => {
   it('should fail when passed nully values', () => {
     expect(function () {
       const instance = <WrapComponent>{null}</WrapComponent>;
+      console.log('instance', instance)
       React.Children.only(instance.props.children);
     }).toThrow();
 
