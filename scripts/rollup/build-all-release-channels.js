@@ -75,16 +75,16 @@ if (process.env.CIRCLE_NODE_TOTAL) {
   const stableDir = tmp.dirSync().name;
   crossDeviceRenameSync('./build', stableDir);
   processStable(stableDir);
-  buildForChannel('experimental', '', '');
-  const experimentalDir = tmp.dirSync().name;
-  crossDeviceRenameSync('./build', experimentalDir);
-  processExperimental(experimentalDir);
+  // buildForChannel('experimental', '', '');
+  // const experimentalDir = tmp.dirSync().name;
+  // crossDeviceRenameSync('./build', experimentalDir);
+  // processExperimental(experimentalDir);
 
   // Then merge the experimental folder into the stable one. processExperimental
   // will have already removed conflicting files.
   //
   // In CI, merging is handled automatically by CircleCI's workspace feature.
-  mergeDirsSync(experimentalDir + '/', stableDir + '/');
+  // mergeDirsSync(experimentalDir + '/', stableDir + '/');
 
   // Now restore the combined directory back to its original name
   crossDeviceRenameSync(stableDir, './build');

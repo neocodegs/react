@@ -785,7 +785,7 @@ async function buildEverything() {
       // [bundle, NODE_PROFILING],
       // [bundle, BUN_DEV],
       // [bundle, BUN_PROD],
-      [bundle, FB_WWW_DEV],
+      // [bundle, FB_WWW_DEV],
       // [bundle, FB_WWW_PROD],
       // [bundle, FB_WWW_PROFILING],
       // [bundle, RN_OSS_DEV],

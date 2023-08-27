@@ -136,7 +136,7 @@ async function copyRNShims() {
     require.resolve('react-native-renderer/src/ReactNativeTypes.js'),
     'build/react-native/shims/ReactNativeTypes.js'
   );
-  processGenerated('build/react-native/shims');
+  // processGenerated('build/react-native/shims');
 }
 
 function processGenerated(directory) {
